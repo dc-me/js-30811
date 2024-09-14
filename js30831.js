@@ -49,3 +49,45 @@ while (lookingPrime) {
     console.log(`Found prime number: ${n}`);
   }
 }
+
+// ================================================================
+// Part 3: Feeling Loopy
+// comment out code are for exact match of the requirement.
+console.log('=================== Feeling Loopy ====================');
+const str =
+  'ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26';
+
+let cell = '';
+let cell1, cell2, cell3, cell4;
+cell1 = cell2 = cell3 = cell4 = cell;
+for (let i = 0, j = 1; i < str.length; i++) {
+  if (str[i] === ',') {
+    // next cell
+    cell += '       ';
+    // switch (j) {
+    //   case 1:
+    //     cell1 = cell;
+    //     break;
+    //   case 2:
+    //     cell2 = cell;
+    //     break;
+    //   case 3:
+    //     cell3 = cell;
+    //     break;
+    //   default:
+    //     throw `out of index, only support 4 cells`;
+    // }
+    // cell = '';
+    j++; // cell number
+  } else {
+    cell += str[i];
+  }
+  if (str[i] === '\n') {
+    // next row
+    console.log(cell);
+    j = 1;
+    // cell4 = cell;
+    // console.log(cell1, cell2, cell3, cell4);
+    cell = '';
+  }
+}
