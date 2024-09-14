@@ -31,9 +31,10 @@ console.log('=================== Prime Time ====================');
 // Declare an arbitrary number, n.
 // Create a loop that searches for the next prime number, starting at n and incrementing from there.
 // As soon as you find the prime number, log that number and exit the loop.
-let n = 50;
+let n = 1427;
 let lookingPrime = true;
-n = n < 1 ? 2 : n; //1 and negative are not prime numbers.
+//1 and negative are not prime numbers, add 1 just for the next prime number(if n is 5 it would print the next prime number 7).
+n = n < 1 ? 2 : n + 1;
 while (lookingPrime) {
   let isPrime = true;
   for (let i = 2; i < n; i++) {
